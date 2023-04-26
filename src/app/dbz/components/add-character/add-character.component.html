@@ -1,0 +1,19 @@
+<h4 *ngIf="title">{{ title }}</h4>
+<form class="row" (ngSubmit)="emitCharacter()">
+  <!-- ngModel-> two way data binding se necesita importar FormsModule -->
+  <input
+    name="name"
+    [(ngModel)]="character.name"
+    class="form-control mb-2"
+    type="text"
+    placeholder="Nombre"
+  />
+  <input
+    name="power"
+    [(ngModel)]="character.power"
+    class="form-control mb-2"
+    type="number"
+    placeholder="Poder"
+  />
+  <button class="btn btn-primary" type="submit">Agregar</button>
+</form>

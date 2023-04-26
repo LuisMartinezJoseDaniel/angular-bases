@@ -1,0 +1,18 @@
+<h1>DBZ Personajes</h1>
+
+<div class="row">
+  <div class="col">
+    <dbz-list
+      title="Personajes de DBZ"
+      [characters]="characters"
+      (onDeleteId)="onDeleteCharacter($event)"
+    ></dbz-list>
+  </div>
+  <!-- $event -> palabra especial de Angular -->
+  <div class="col">
+    <dbz-add-character
+      title="Agregar Personaje"
+      (onNewCharacter)="onNewCharacter($event)"
+    ></dbz-add-character>
+  </div>
+</div>
